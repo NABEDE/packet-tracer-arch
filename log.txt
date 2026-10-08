@@ -1,0 +1,24 @@
+lun. sept. 28 13:11:40 2026   Router1   Router>enable
+lun. sept. 28 13:11:40 2026   Router1   Router#configure terminal
+lun. sept. 28 13:11:40 2026   Router1   Router(config)#interface FastEthernet0/0
+lun. sept. 28 13:11:42 2026   Router1   Router(config-if)#no shutdown
+lun. sept. 28 13:12:21 2026   Router1   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+lun. sept. 28 13:12:34 2026   Router1   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+lun. sept. 28 13:12:36 2026   Router1   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+lun. sept. 28 13:13:09 2026   Router1   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+lun. sept. 28 13:13:11 2026   Router1   Router(config-if)#exit
+lun. sept. 28 13:13:11 2026   Router1   Router(config)#interface FastEthernet0/1
+lun. sept. 28 13:13:13 2026   Router1   Router(config-if)#no shutdown
+lun. sept. 28 13:13:38 2026   Router1   Router(config-if)#ip address 192.168.2.1 255.255.255.0
+lun. sept. 28 13:13:39 2026   Router1   Router(config-if)#ip address 192.168.2.1 255.255.255.0
+lun. sept. 28 13:13:51 2026   Router2   Router>enable
+lun. sept. 28 13:13:51 2026   Router2   Router#configure terminal
+lun. sept. 28 13:13:51 2026   Router2   Router(config)#interface FastEthernet0/0
+lun. sept. 28 13:13:57 2026   Router2   Router(config-if)#no shutdown
+lun. sept. 28 13:14:18 2026   Router2   Router(config-if)#ip address 193.168.1.1 255.255.255.0
+lun. sept. 28 13:14:19 2026   Router2   Router(config-if)#ip address 193.168.1.1 255.255.255.0
+lun. sept. 28 13:14:21 2026   Router2   Router(config-if)#exit
+lun. sept. 28 13:14:21 2026   Router2   Router(config)#interface FastEthernet0/1
+lun. sept. 28 13:14:23 2026   Router2   Router(config-if)#no shutdown
+lun. sept. 28 13:14:34 2026   Router2   Router(config-if)#ip address 193.168.2.1 255.255.255.0
+lun. sept. 28 13:14:35 2026   Router2   Router(config-if)#ip address 193.168.2.1 255.255.255.0
