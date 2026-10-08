@@ -1,0 +1,54 @@
+jeu. oct. 8 16:13:50 2026   Router0   Router>enable
+jeu. oct. 8 16:13:50 2026   Router0   Router#configure terminal
+jeu. oct. 8 16:13:50 2026   Router0   Router(config)#interface GigabitEthernet0/0
+jeu. oct. 8 16:13:57 2026   Router0   Router(config-if)#exit
+jeu. oct. 8 16:15:11 2026   Router0   Router(config)#router rip
+jeu. oct. 8 16:15:15 2026   Router0   Router(config-router)#version 2
+jeu. oct. 8 16:15:36 2026   Router0   Router(config-router)#network 192.168.1.0
+jeu. oct. 8 16:15:53 2026   Router0   Router(config-router)#network 192.168.2.0
+jeu. oct. 8 16:15:55 2026   Router0   Router(config-router)#exit
+jeu. oct. 8 16:15:57 2026   Router0   Router(config)#exit
+jeu. oct. 8 16:15:59 2026   Router0   Router#write
+jeu. oct. 8 16:16:09 2026   Router0   Router#configure terminal
+jeu. oct. 8 16:16:17 2026   Router0   Router(config)#router ospf 100
+jeu. oct. 8 16:17:02 2026   Router0   Router(config-router)#network 192.168.1.0 0.0.0.255 area 0
+jeu. oct. 8 16:17:25 2026   Router0   Router(config-router)#network 192.168.2.0 0.0.0.255 area 0
+jeu. oct. 8 16:17:27 2026   Router0   Router(config-router)#exit
+jeu. oct. 8 16:17:29 2026   Router0   Router(config)#exit
+jeu. oct. 8 16:17:31 2026   Router0   Router#write
+jeu. oct. 8 16:18:04 2026   Router0   Router#show ip ospf neighbor
+jeu. oct. 8 16:18:12 2026   Router0   Router#configure terminal
+jeu. oct. 8 16:18:12 2026   Router0   Router(config)#interface GigabitEthernet0/0
+jeu. oct. 8 16:18:41 2026   Router_Lome   Router(config-if)#end
+jeu. oct. 8 16:18:41 2026   Router_Lome   Router#configure terminal
+jeu. oct. 8 16:18:41 2026   Router_Lome   Router(config)#hostname lome_host
+jeu. oct. 8 16:26:00 2026   Router_Agoe   Router>enable
+jeu. oct. 8 16:26:00 2026   Router_Agoe   Router#configure terminal
+jeu. oct. 8 16:26:00 2026   Router_Agoe   Router(config)#hostname hostname_agoe
+jeu. oct. 8 16:26:13 2026   Router_Agoe   hostname_agoe(config)#exit
+jeu. oct. 8 16:26:21 2026   Router_Agoe   hostname_agoe#config terminal
+jeu. oct. 8 16:26:27 2026   Router_Agoe   hostname_agoe(config)#router rip
+jeu. oct. 8 16:26:30 2026   Router_Agoe   hostname_agoe(config-router)#version 2
+jeu. oct. 8 16:26:40 2026   Router_Agoe   hostname_agoe(config-router)#network 192.168.2.0
+jeu. oct. 8 16:26:49 2026   Router_Agoe   hostname_agoe(config-router)#network 192.168.3.0
+jeu. oct. 8 16:26:57 2026   Router_Agoe   hostname_agoe(config-router)#exit
+jeu. oct. 8 16:26:58 2026   Router_Agoe   hostname_agoe(config)#exi
+jeu. oct. 8 16:27:01 2026   Router_Agoe   hostname_agoe#write
+jeu. oct. 8 16:27:35 2026   Router_Agoe   hostname_agoe#show ip rip neighbor
+jeu. oct. 8 16:27:43 2026   Router_Agoe   hostname_agoe#show ip rip status
+jeu. oct. 8 16:27:48 2026   Router_Agoe   hostname_agoe#show rip status
+jeu. oct. 8 16:27:50 2026   Router_Agoe   hostname_agoe#clear
+jeu. oct. 8 16:27:55 2026   Router_Agoe   hostname_agoe#configure
+jeu. oct. 8 16:28:12 2026   Router_Agoe   hostname_agoe(config)#router ospf 100
+jeu. oct. 8 16:28:33 2026   Router_Agoe   hostname_agoe(config-router)#network 192.168.2.0 0.0.0.255 area 0
+jeu. oct. 8 16:28:55 2026   Router_Agoe   hostname_agoe(config-router)#network 192.168.3.0 0.0.0.255 area 0
+jeu. oct. 8 16:28:57 2026   Router_Agoe   hostname_agoe(config-router)#exit
+jeu. oct. 8 16:28:59 2026   Router_Agoe   hostname_agoe(config)#exit
+jeu. oct. 8 16:29:01 2026   Router_Agoe   hostname_agoe#write
+jeu. oct. 8 16:29:33 2026   Router_Agoe   hostname_agoe#configure terminal
+jeu. oct. 8 16:29:33 2026   Router_Agoe   hostname_agoe(config)#interface GigabitEthernet0/1
+jeu. oct. 8 16:29:38 2026   Router_Agoe   hostname_agoe(config-if)#ip address 192.168.3.1 255.255.255.0
+jeu. oct. 8 16:31:57 2026   Router_Lome   lome_host(config)#interface GigabitEthernet0/0
+jeu. oct. 8 16:32:02 2026   Router_Lome   lome_host(config-if)#ip address 192.168.2.1 255.255.255.0
+jeu. oct. 8 16:33:40 2026   Router_Agoe   hostname_agoe(config-if)#exit
+jeu. oct. 8 16:33:40 2026   Router_Agoe   hostname_agoe(config)#interface GigabitEthernet0/1
